@@ -40,19 +40,19 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 
 ### Cài đặt faucet
 
-##### Cài đặt các gói cần thiết
+##### 1. Cài đặt các gói cần thiết
 ```
 sudo apt-get install curl gnupg apt-transport-https lsb-release
 echo "deb https://packagecloud.io/faucetsdn/faucet/$(lsb_release -si | awk '{print tolower($0)}')/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/faucet.list
 curl -L https://packagecloud.io/faucetsdn/faucet/gpgkey | sudo apt-key add -
 sudo apt-get update
 ```
-##### Cài faucet-all-in-one
+##### 2. Cài faucet-all-in-one
 ```
 sudo apt-get install faucet-all-in-one
 ```
 
-###### Kiểm tra cấu hình faucet
+##### 3. Kiểm tra cấu hình faucet
 
 File `/etc/faucet/faucet.yaml`
 
@@ -65,18 +65,23 @@ Nếu thay đổi cấu hình thì reload faucet
 sudo systemctl reload faucet
 ```
 
-##### Kiểm tra log
+##### 4. Kiểm tra log
 Vị trí file `/var/log/faucet/faucet.log`
-
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2001-51-15.png)
 
 ### Chạy mininet với controller là faucet
 ```
 sudo mn --controller=remote,ip=127.0.0.1,port=6653 --custom mntest.py --topo mytopo
 ```
-### ping để kiểm tra
+
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2001-56-19.png)
+
+ping để kiểm tra
 `
 pingall
 `
+
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2001-57-22.png)
 
 
 
