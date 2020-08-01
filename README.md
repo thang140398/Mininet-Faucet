@@ -69,7 +69,7 @@ sudo systemctl reload faucet
 Vị trí file `/var/log/faucet/faucet.log`
 ![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2001-51-15.png)
 
-### Chạy mininet với controller là faucet
+### Chạy mininet với controller là faucet (Dùng custom topo mntest)
 ```
 sudo mn --controller=remote,ip=127.0.0.1,port=6653 --custom mntest.py --topo mytopo
 ```
@@ -83,7 +83,20 @@ pingall
 
 ![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2001-57-22.png)
 
+### Chạy mininet với controller là faucet
+```
+sudo mn --controller=remote
+```
+Thử tắt faucet rồi mới chạy lệnh, sau đó pingall
 
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2003-11-56.png)
 
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2003-12-22.png)
+
+Bật faucet lên rồi pingall
+
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2003-12-41.png)
+
+![alt](https://github.com/thang140398/Mininet-Faucet/blob/master/Picture%20for%20REAME.md/Screenshot%20from%202020-08-02%2003-12-56.png)
 
 
