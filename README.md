@@ -1,22 +1,12 @@
 # Mininet-Faucet
 
-#T1
-## T2
-### T3
+Mininet x.x
+Faucet x.x
 
-a
+## Giới thiệu
 
-a
+## Cài đặt mininet
+sudo apt -get install mininet
 
-ee
-ee
+## Cài đặt faucet
 
-ww
-
-
-```
-$ sudo apt update
-$ sudo apt install virtualbox
-```
-
-`aaa`
